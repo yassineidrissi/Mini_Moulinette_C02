@@ -1,0 +1,6 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory `/Users/yassine/Desktop/42_project/tester/libft-war-machine'
+make: Leaving directory `/Users/yassine/Desktop/42_project/tester/libft-war-machine'
+ 
+make: *** No rule to make target `ft_isalpha.o', needed by `libft.a'.
+
