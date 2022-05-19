@@ -11,7 +11,7 @@ The script will do the following tests :
 - Check if the author file exists
 - Check content of the author file
 - Compil library
-- Check norme errors
+- Check norminette errors
 - Check forbidden functions
 - Tests functions
 
