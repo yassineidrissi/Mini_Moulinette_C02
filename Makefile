@@ -6,7 +6,7 @@
 #    By: yaidriss <yaidriss@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/15 10:23:08 by yassine           #+#    #+#              #
-#    Updated: 2022/05/19 19:53:17 by yaidriss         ###   ########.fr        #
+#    Updated: 2022/05/19 20:53:07 by yaidriss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ CC				= gcc
 RM				= rm -f
 CFLAGS			= -Wall -Wextra -Werror -I.
 
-NAME			=  libft.a
+NAME			=  c02.a
 
 all:			$(NAME)
 

@@ -3,7 +3,7 @@ $> hostname; uname -msr
 c2r1p7.1337.ma
 Darwin 19.6.0 x86_64
 $> date
-Thu May 19 20:03:08 +01 2022
+Thu May 19 20:53:12 +01 2022
 $> gcc --version
 Apple clang version 12.0.0 (clang-1200.0.32.29)
 Target: x86_64-apple-darwin19.6.0
@@ -35,21 +35,21 @@ Norme check failed
 = Compiling libft ==============================================================
 $> make re
 rm -f ft_strcpy.o 
-rm -f libft.a
+rm -f c02.a
 gcc -Wall -Wextra -Werror -I.   -c -o ft_strcpy.o ft_strcpy.c
-ar rcs libft.a ft_strcpy.o
+ar rcs c02.a ft_strcpy.o
 
 $> make bonus
 make: Nothing to be done for `bonus'.
 
-$> ls -la libft.a
--rw-r--r--  1 yaidriss  candidates  904 May 19 20:03 /Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/dirlibft/libft.a
+$> ls -la c02.a
+-rw-r--r--  1 yaidriss  candidates  904 May 19 20:53 /Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/dirlibft/c02.a
 
 = Part1_functions ==============================================================
 
 = ft_strcpy.c ==================================================================
 $> norminette ft_strcpy.c | grep -E '(Error|Warning)'
-$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strcpy.c main.c libft.a -o user_exe
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strcpy.c main.c c02.a -o user_exe
 
 = Test 1 ===================================================
 $> ./user_exe 01
@@ -69,7 +69,7 @@ Diff OK :D
 
 = ft_strncpy.c =================================================================
 $> norminette ft_strncpy.c | grep -E '(Error|Warning)'
-$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strncpy.c main.c libft.a -o user_exe
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strncpy.c main.c c02.a -o user_exe
 
 = Test 1 ===================================================
 $> ./user_exe 01
@@ -104,7 +104,7 @@ Diff OK :D
 
 = ft_str_is_alpha.c ============================================================
 $> norminette ft_str_is_alpha.c | grep -E '(Error|Warning)'
-$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_str_is_alpha.c main.c libft.a -o user_exe
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_str_is_alpha.c main.c c02.a -o user_exe
 
 = Test 1 ===================================================
 $> ./user_exe 01
@@ -144,7 +144,7 @@ Diff OK :D
 
 = ft_str_is_numeric.c ==========================================================
 $> norminette ft_str_is_numeric.c | grep -E '(Error|Warning)'
-$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_str_is_numeric.c main.c libft.a -o user_exe
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_str_is_numeric.c main.c c02.a -o user_exe
 
 = Test 1 ===================================================
 $> ./user_exe 01
@@ -184,7 +184,7 @@ Diff OK :D
 
 = ft_str_is_lowercase.c ========================================================
 $> norminette ft_str_is_lowercase.c | grep -E '(Error|Warning)'
-$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_str_is_lowercase.c main.c libft.a -o user_exe
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_str_is_lowercase.c main.c c02.a -o user_exe
 
 = Test 1 ===================================================
 $> ./user_exe 01
@@ -224,7 +224,7 @@ Diff OK :D
 
 = ft_str_is_uppercase.c ========================================================
 $> norminette ft_str_is_uppercase.c | grep -E '(Error|Warning)'
-$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_str_is_uppercase.c main.c libft.a -o user_exe
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_str_is_uppercase.c main.c c02.a -o user_exe
 
 = Test 1 ===================================================
 $> ./user_exe 01
@@ -264,7 +264,7 @@ Diff OK :D
 
 = ft_str_is_printable.c ========================================================
 $> norminette ft_str_is_printable.c | grep -E '(Error|Warning)'
-$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_str_is_printable.c main.c libft.a -o user_exe
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_str_is_printable.c main.c c02.a -o user_exe
 
 = Test 1 ===================================================
 $> ./user_exe 01
@@ -299,7 +299,7 @@ Diff OK :D
 = Test 7 ===================================================
 $> ./user_exe 07
 $> diff -U 3 user_output_test07 test07.output
---- /Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_str_is_printable/user_output_test07	2022-05-19 20:03:14.000000000 +0100$
+--- /Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_str_is_printable/user_output_test07	2022-05-19 20:53:19.000000000 +0100$
 +++ /Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_str_is_printable/test07.output	2022-05-17 18:21:08.000000000 +0100$
 @@ -1 +1 @@$
 -11111$
@@ -311,7 +311,7 @@ Diff KO :(
 
 = ft_strupcase.c ===============================================================
 $> norminette ft_strupcase.c | grep -E '(Error|Warning)'
-$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strupcase.c main.c libft.a -o user_exe
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strupcase.c main.c c02.a -o user_exe
 
 = Test 1 ===================================================
 $> ./user_exe 01
@@ -331,7 +331,7 @@ Diff OK :D
 
 = ft_strlowcase.c ==============================================================
 $> norminette ft_strlowcase.c | grep -E '(Error|Warning)'
-$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strlowcase.c main.c libft.a -o user_exe
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strlowcase.c main.c c02.a -o user_exe
 
 = Test 1 ===================================================
 $> ./user_exe 01
@@ -357,7 +357,7 @@ Error: NO_ARGS_VOID         (line:  36, col:  10):	Empty function argument requi
 Error: SPC_AFTER_OPERATOR   (line:  38, col:  16):	missing space after operator
 Error: BRACE_SHOULD_EOL     (line:  39, col:   1):	Expected newline after brace
 Norme check failed
-$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strcapitalize.c main.c libft.a -o user_exe
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strcapitalize.c main.c c02.a -o user_exe
 
 /Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_strcapitalize/main.c:37:19: error: implicit declaration of function 'ft_strcapitalize' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
                 ft_print_result(ft_strcapitalize(str));
@@ -390,7 +390,7 @@ void    ft_print_result(char const *s)
 
 = ft_strlcpy.c =================================================================
 $> norminette ft_strlcpy.c | grep -E '(Error|Warning)'
-$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strlcpy.c main.c libft.a -o user_exe
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strlcpy.c main.c c02.a -o user_exe
 
 /Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_strlcpy/main.c:41:19: error: implicit declaration of function 'ft_strlcpy' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
                 ft_print_result(ft_strlcpy(dest, "lorem", 15));

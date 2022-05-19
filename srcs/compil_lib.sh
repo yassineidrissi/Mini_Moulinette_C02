@@ -20,9 +20,9 @@ func_compil_lib()
 	printf "\n${CHAR_WIDTH}\033[$(( (${TITLE_LENGTH} - ${#text}) / 2 ))G${text}\033[${TITLE_LENGTH}G${CHAR_WIDTH}\n"
 	printf "%.s${CHAR_LENGTH}" $(seq 1 ${TITLE_LENGTH})
 	printf "\n\n${DEFAULT}"
-	if [ -e "${PATH_LIBFT}"/libft.a ]
+	if [ -e "${PATH_LIBFT}"/c02.a ]
 	then
-		rm -f "${PATH_LIBFT}"/libft.a
+		rm -f "${PATH_LIBFT}"/c02.a
 	fi
 
 	text="= Compiling libft "
@@ -43,7 +43,7 @@ func_compil_lib()
 			printf "\033[51Gmake re"
 			printf "\033[34Gmake bonus"
 			printf "\033[67Gmake clean"
-			printf "\033[83Glibft.a\n"
+			printf "\033[83Gc02.a\n"
 		else
 			printf "rule all"
 			printf "\033[17Grule \$(NAME)"
@@ -51,7 +51,7 @@ func_compil_lib()
 			printf "\033[51Grule fclean"
 			printf "\033[34Grule bonus"
 			printf "\033[67Gmake re"
-			printf "\033[83Glibft.a\n"
+			printf "\033[83Gc02.a\n"
 		fi
 
 		if [ ${OPT_FULL_MAKEFILE} -eq 1 ]
@@ -63,10 +63,10 @@ func_compil_lib()
 			then
 				printf "${COLOR_FAIL}missing rule${DEFAULT}"
 			else
-				if [ -e "${PATH_LIBFT}"/libft.a ]
+				if [ -e "${PATH_LIBFT}"/c02.a ]
 				then
 					printf "${COLOR_OK}ok${DEFAULT}"
-					rm -f "${PATH_LIBFT}"/libft.a
+					rm -f "${PATH_LIBFT}"/c02.a
 				else
 					printf "${COLOR_FAIL}fail${DEFAULT}"
 				fi
@@ -89,12 +89,12 @@ func_compil_lib()
 			then
 				printf "\033[17G${COLOR_FAIL}missing rule${DEFAULT}"
 			else
-				if [ -e "${PATH_LIBFT}"/libft.a ]
+				if [ -e "${PATH_LIBFT}"/c02.a ]
 				then
 					printf "\033[17G${COLOR_OK}ok${DEFAULT}"
 				else
 					printf "\033[17G${COLOR_FAIL}fail${DEFAULT}"
-					touch "${PATH_LIBFT}"/libft.a
+					touch "${PATH_LIBFT}"/c02.a
 				fi
 			fi
 		else
@@ -114,14 +114,14 @@ func_compil_lib()
 			then
 				printf "\033[34G${COLOR_FAIL}missing rule${DEFAULT}"
 			else
-				if [ ! -e "${PATH_LIBFT}"/libft.a ] && [ ! -e "${PATH_LIBFT}"/ft_*.o ]
+				if [ ! -e "${PATH_LIBFT}"/c02.a ] && [ ! -e "${PATH_LIBFT}"/ft_*.o ]
 				then
 					printf "\033[34G${COLOR_OK}ok${DEFAULT}"
-					touch "${PATH_LIBFT}"/libft.a
+					touch "${PATH_LIBFT}"/c02.a
 				else
 					printf "\033[34G${COLOR_FAIL}fail${DEFAULT}"
 					rm -f "${PATH_LIBFT}"/ft_*.o
-					rm -f "${PATH_LIBFT}"/libft.a
+					rm -f "${PATH_LIBFT}"/c02.a
 				fi
 			fi
 		else
@@ -141,7 +141,7 @@ func_compil_lib()
 			then
 				printf "\033[51G${COLOR_FAIL}missing rule${DEFAULT}"
 			else
-				if [ -e "${PATH_LIBFT}"/libft.a ]
+				if [ -e "${PATH_LIBFT}"/c02.a ]
 				then
 					printf "\033[51G${COLOR_OK}ok${DEFAULT}"
 				else
@@ -178,7 +178,7 @@ func_compil_lib()
 			then
 				printf "\033[67G${COLOR_FAIL}missing rule${DEFAULT}"
 			else
-				if [ -e "${PATH_LIBFT}"/libft.a ]
+				if [ -e "${PATH_LIBFT}"/c02.a ]
 				then
 					printf "\033[67G${COLOR_OK}ok${DEFAULT}"
 				else
@@ -191,9 +191,9 @@ func_compil_lib()
 		printf "\n$> make bonus\n" >> "${PATH_DEEPTHOUGHT}"/deepthought
 		make --no-print-directory -C "${PATH_LIBFT}" bonus>>"${PATH_DEEPTHOUGHT}"/deepthought 2>&1
 
-		printf "\n$> ls -la libft.a\n" >> "${PATH_DEEPTHOUGHT}"/deepthought
-		ls -la "${PATH_LIBFT}"/libft.a >> "${PATH_DEEPTHOUGHT}"/deepthought
-		if [ -e "${PATH_LIBFT}"/libft.a ]
+		printf "\n$> ls -la c02.a\n" >> "${PATH_DEEPTHOUGHT}"/deepthought
+		ls -la "${PATH_LIBFT}"/c02.a >> "${PATH_DEEPTHOUGHT}"/deepthought
+		if [ -e "${PATH_LIBFT}"/c02.a ]
 		then
 			printf "\033[83G${COLOR_OK}found\n\n${DEFAULT}"
 		else
