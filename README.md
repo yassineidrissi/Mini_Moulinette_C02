@@ -19,8 +19,7 @@ At the end of the tests, a deepthought file will be created, inside which you
 can find all the results and error/failure messages. You can also see your
 results in tests directory.
 
-The script will compil your files with your C02, so you must have your
-Makefile up to date.
+The script will compil your files with your C02.
 
 :warning:All the tests made are not the official tests:warning:
 
