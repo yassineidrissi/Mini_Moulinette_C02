@@ -3,7 +3,7 @@ This is an edit of prev libftest made by @yaidriss to fit with the 2019 project 
 (ORIGINAL REP : https://github.com/yaidriss/Libftest) <br/>
 This update was made by @lmartin <br/>
 
-# libft-war-machine
+# Mini_Moulinette_C02
 <img align="right" src="./srcs/img_readme.png" width="50%"/>
 This repository contains script to test your libft project.
 The script will do the following tests :
@@ -105,11 +105,10 @@ All the supported functions are listed [on this page](https://github.com/y3ll0w4
 ## Contribution
 
 Any suggestions or bugs reporting ?
-Contact lmartin@student.42.fr
+Contact [yassineidrissi.me](yassineidrissi.me)
 
 ### Contributors
-- yaidriss : https://github.com/yaidriss
-- jmichaud : https://github.com/MrJe
+- yaidriss : https://github.com/yassineidrissi
 - tlernoul
 # C00_tester_1337
 # Mini_Moulinette_C02
