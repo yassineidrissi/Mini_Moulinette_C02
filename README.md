@@ -92,6 +92,5 @@ Contact [yassineidrissi.me](yassineidrissi.me)
 
 ### Contributors
 - yaidriss : https://github.com/yassineidrissi
-- tlernoul
 # C00_tester_1337
 # Mini_Moulinette_C02
