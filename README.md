@@ -1,17 +1,17 @@
 # PREAMBLE
-This is an edit of prev libftest made by @yaidriss to fit with the 2022 project libft. <br/>
+This is an edit of prev C02est made by @yaidriss to fit with the 2022 project C02. <br/>
 (ORIGINAL REP : https://github.com/yassineidrissi) <br/>
 This update was made by @yaidriss <br/>
 
 # Mini_Moulinette_C02
 <img align="right" src="./srcs/img_readme.png" width="50%"/>
-This repository contains script to test your libft project.
+This repository contains script to test your C02 project.
 The script will do the following tests :
 
 - Check if the author file exists
 - Check content of the author file
-- Check if libft.h exists
-- Check norme of libft.h
+- Check if C02.h exists
+- Check norme of C02.h
 - Check if the Makefile file exists
 - Check rules in Makefile
 - Check compilation's flag in Makefile
@@ -24,7 +24,7 @@ At the end of the tests, a deepthought file will be created, inside which you
 can find all the results and error/failure messages. You can also see your
 results in tests directory.
 
-The script will compil your files with your libft, so you must have your
+The script will compil your files with your C02, so you must have your
 Makefile up to date.
 
 :warning:All the tests made are not the official tests:warning:
@@ -40,7 +40,7 @@ git clone https://github.com/y3ll0w42/Mini_Moulinette_C02
 ### Configuration
 
 If you run the script for the first time, it will automatically create
-`my_config.sh` file and ask you to edit it with the path of your libft
+`my_config.sh` file and ask you to edit it with the path of your C02
 project.
 You can also choose the colors that will be used and the path where the
 deepthought file will be created.
@@ -105,11 +105,10 @@ All the supported functions are listed [on this page](https://github.com/y3ll0w4
 ## Contribution
 
 Any suggestions or bugs reporting ?
-Contact lmartin@student.42.fr
+Contact [yassineidrissi.me](yassineidrissi.me)
 
 ### Contributors
-- yaidriss : https://github.com/yaidriss
-- jmichaud : https://github.com/MrJe
+- yaidriss : https://github.com/yassineidrissi
 - tlernoul
 # C00_tester_1337
 # Mini_Moulinette_C02
