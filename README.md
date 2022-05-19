@@ -10,11 +10,6 @@ The script will do the following tests :
 
 - Check if the author file exists
 - Check content of the author file
-- Check if C02.h exists
-- Check norme of C02.h
-- Check if the Makefile file exists
-- Check rules in Makefile
-- Check compilation's flag in Makefile
 - Compil library
 - Check norme errors
 - Check forbidden functions
@@ -80,24 +75,12 @@ bash /path/where/you/cloned/grademe.sh
 | `-c` | Disable color |
 | `-s` | Disable searching Makefile and author files |
 | `-m` | When compiling library, test all the Makefile's rules (instead of doing only make re and checking if other rules exist). |
-| `-l` | Disable compiling library |
-| `-f` | Disable checking forbidden functions |
-| `-n` | Disable norminette |
-| `-u` | Disable checking updates at launch |
-| `-p1` | Disable part 1 tests |
-| `-p2` | Disable part 2 tests |
-| `-b`| Disable bonus part tests |
-| `-a` | Disable additional part tests |
-| `-op1`| Do only part 1 tests |
-| `-op2`| Do only part 2 tests |
-| `-ob` | Do only bonus part tests |
-| `-oa` | Do only additional part tests |
-| `ft_function` | Test only this function |
+
 
 Add successively all options you want, in the order you want.
 For example :
 ```bash
-bash grademe.sh ft_atoi -f ft_strlen -n
+bash grademe.sh ft_strcmpy -f ft_ -n
 ```
 
 ### Supported functions
