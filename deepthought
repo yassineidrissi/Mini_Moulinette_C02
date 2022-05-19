@@ -3,11 +3,7 @@ $> hostname; uname -msr
 c2r1p7.1337.ma
 Darwin 19.6.0 x86_64
 $> date
-<<<<<<< HEAD
-Thu May 19 19:54:51 +01 2022
-=======
-Tue May 17 21:43:58 +01 2022
->>>>>>> 0e041c9c09661cd8b4cc38400025a49a84e76b36
+Thu May 19 20:03:08 +01 2022
 $> gcc --version
 Apple clang version 12.0.0 (clang-1200.0.32.29)
 Target: x86_64-apple-darwin19.6.0
@@ -21,11 +17,7 @@ InstalledDir: /Library/Developer/CommandLineTools/usr/bin
 
 = libft.h=======================================================================
 $> norminette libft.h | grep -E '(Error|Warning)'
-<<<<<<< HEAD
 /Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/dirlibft/libft.h: Error!
-=======
-/Users/yaidriss/Desktop/1337/c02 2/Mini_Moulinette_C02/dirlibft/libft.h: Error!
->>>>>>> 0e041c9c09661cd8b4cc38400025a49a84e76b36
 Error: CONSECUTIVE_SPC      (line:  19, col:   5):	Two or more consecutives spaces
 Error: SPACE_REPLACE_TAB    (line:  19, col:   5):	Found space when expecting tab
 Error: MIXED_SPACE_TAB      (line:  22, col:   4):	Mixed spaces and tabs
@@ -38,10 +30,6 @@ Error: MIXED_SPACE_TAB      (line:  25, col:   5):	Mixed spaces and tabs
 Error: SPACE_REPLACE_TAB    (line:  25, col:   5):	Found space when expecting tab
 Error: MIXED_SPACE_TAB      (line:  26, col:   5):	Mixed spaces and tabs
 Error: SPACE_REPLACE_TAB    (line:  26, col:   5):	Found space when expecting tab
-Error: MIXED_SPACE_TAB      (line:  27, col:   5):	Mixed spaces and tabs
-Error: SPACE_REPLACE_TAB    (line:  27, col:   5):	Found space when expecting tab
-Error: CONSECUTIVE_SPC      (line:  28, col:  13):	Two or more consecutives spaces
-Error: SPACE_REPLACE_TAB    (line:  28, col:  13):	Found space when expecting tab
 Norme check failed
 
 = Compiling libft ==============================================================
@@ -55,19 +43,12 @@ $> make bonus
 make: Nothing to be done for `bonus'.
 
 $> ls -la libft.a
-<<<<<<< HEAD
--rw-r--r--  1 yaidriss  candidates  904 May 19 19:54 /Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/dirlibft/libft.a
-=======
--rw-r--r--  1 yaidriss  candidates  10208 May 17 21:43 /Users/yaidriss/Desktop/1337/c02 2/Mini_Moulinette_C02/dirlibft/libft.a
->>>>>>> 0e041c9c09661cd8b4cc38400025a49a84e76b36
+-rw-r--r--  1 yaidriss  candidates  904 May 19 20:03 /Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/dirlibft/libft.a
 
 = Part1_functions ==============================================================
 
 = ft_strcpy.c ==================================================================
 $> norminette ft_strcpy.c | grep -E '(Error|Warning)'
-../ft_strcpy.c: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strcpy.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -88,9 +69,6 @@ Diff OK :D
 
 = ft_strncpy.c =================================================================
 $> norminette ft_strncpy.c | grep -E '(Error|Warning)'
-../ft_strncpy.c: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strncpy.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -126,10 +104,6 @@ Diff OK :D
 
 = ft_str_is_alpha.c ============================================================
 $> norminette ft_str_is_alpha.c | grep -E '(Error|Warning)'
-../ft_str_is_alpha.c: Error!
-Error: EMPTY_LINE_FILE_START (line:   1, col:   1):	Empty line at start of file
-Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_str_is_alpha.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -170,10 +144,6 @@ Diff OK :D
 
 = ft_str_is_numeric.c ==========================================================
 $> norminette ft_str_is_numeric.c | grep -E '(Error|Warning)'
-../ft_str_is_numeric.c: Error!
-Error: EMPTY_LINE_FILE_START (line:   1, col:   1):	Empty line at start of file
-Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_str_is_numeric.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -214,9 +184,6 @@ Diff OK :D
 
 = ft_str_is_lowercase.c ========================================================
 $> norminette ft_str_is_lowercase.c | grep -E '(Error|Warning)'
-../ft_str_is_lowercase.c: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_str_is_lowercase.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -257,9 +224,6 @@ Diff OK :D
 
 = ft_str_is_uppercase.c ========================================================
 $> norminette ft_str_is_uppercase.c | grep -E '(Error|Warning)'
-../ft_str_is_uppercase.c: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_str_is_uppercase.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -300,9 +264,6 @@ Diff OK :D
 
 = ft_str_is_printable.c ========================================================
 $> norminette ft_str_is_printable.c | grep -E '(Error|Warning)'
-../ft_str_is_printable.c: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_str_is_printable.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -338,13 +299,8 @@ Diff OK :D
 = Test 7 ===================================================
 $> ./user_exe 07
 $> diff -U 3 user_output_test07 test07.output
-<<<<<<< HEAD
---- /Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_str_is_printable/user_output_test07	2022-05-19 19:54:58.000000000 +0100$
+--- /Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_str_is_printable/user_output_test07	2022-05-19 20:03:14.000000000 +0100$
 +++ /Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_str_is_printable/test07.output	2022-05-17 18:21:08.000000000 +0100$
-=======
---- /Users/yaidriss/Desktop/1337/c02 2/Mini_Moulinette_C02/tests/Part1_functions/ft_str_is_printable/user_output_test07	2022-05-17 21:44:05.000000000 +0100$
-+++ /Users/yaidriss/Desktop/1337/c02 2/Mini_Moulinette_C02/tests/Part1_functions/ft_str_is_printable/test07.output	2022-05-17 21:41:31.000000000 +0100$
->>>>>>> 0e041c9c09661cd8b4cc38400025a49a84e76b36
 @@ -1 +1 @@$
 -11111$
 \ No newline at end of file$
@@ -355,9 +311,6 @@ Diff KO :(
 
 = ft_strupcase.c ===============================================================
 $> norminette ft_strupcase.c | grep -E '(Error|Warning)'
-../ft_strupcase.c: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strupcase.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -378,9 +331,6 @@ Diff OK :D
 
 = ft_strlowcase.c ==============================================================
 $> norminette ft_strlowcase.c | grep -E '(Error|Warning)'
-../ft_strlowcase.c: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strlowcase.c main.c libft.a -o user_exe
 
 = Test 1 ===================================================
@@ -402,12 +352,13 @@ Diff OK :D
 = ft_strcapitalize.c ===========================================================
 $> norminette ft_strcapitalize.c | grep -E '(Error|Warning)'
 ../ft_strcapitalize.c: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
-Error: NO_SPC_BFR_PAR       (line:  35, col:  57):	Extra space before parenthesis (brace/bracket)
+Error: SPACE_BEFORE_FUNC    (line:  36, col:   4):	space before function name
+Error: NO_ARGS_VOID         (line:  36, col:  10):	Empty function argument requires void
+Error: SPC_AFTER_OPERATOR   (line:  38, col:  16):	missing space after operator
+Error: BRACE_SHOULD_EOL     (line:  39, col:   1):	Expected newline after brace
 Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strcapitalize.c main.c libft.a -o user_exe
 
-<<<<<<< HEAD
 /Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_strcapitalize/main.c:37:19: error: implicit declaration of function 'ft_strcapitalize' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
                 ft_print_result(ft_strcapitalize(str));
                                 ^
@@ -436,32 +387,11 @@ void    ft_print_result(char const *s)
 void    ft_print_result(char const *s)
                                     ^
 6 errors generated.
-=======
-= Test 1 ===================================================
-$> ./user_exe 01
-$> diff -U 3 user_output_test01 test01.output
-
-Diff OK :D
-= Test 2 ===================================================
-$> ./user_exe 02
-$> diff -U 3 user_output_test02 test02.output
-
-Diff OK :D
-= Test 3 ===================================================
-$> ./user_exe 03
-$> diff -U 3 user_output_test03 test03.output
-
-Diff OK :D
->>>>>>> 0e041c9c09661cd8b4cc38400025a49a84e76b36
 
 = ft_strlcpy.c =================================================================
 $> norminette ft_strlcpy.c | grep -E '(Error|Warning)'
-../ft_strlcpy.c: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strlcpy.c main.c libft.a -o user_exe
 
-<<<<<<< HEAD
 /Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_strlcpy/main.c:41:19: error: implicit declaration of function 'ft_strlcpy' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
                 ft_print_result(ft_strlcpy(dest, "lorem", 15));
                                 ^
@@ -478,29 +408,3 @@ $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strlcpy.c main.c libft.
                 ft_print_result(ft_strlcpy(dest, "lorem ipsum dolor sit amet", 0));
                                 ^
 5 errors generated.
-=======
-= Test 1 ===================================================
-$> ./user_exe 01
-$> diff -U 3 user_output_test01 test01.output
-
-Diff OK :D
-= Test 2 ===================================================
-$> ./user_exe 02
-$> diff -U 3 user_output_test02 test02.output
-Binary files /Users/yaidriss/Desktop/1337/c02 2/Mini_Moulinette_C02/tests/Part1_functions/ft_strlcpy/user_output_test02 and /Users/yaidriss/Desktop/1337/c02 2/Mini_Moulinette_C02/tests/Part1_functions/ft_strlcpy/test02.output differ$
-
-Diff KO :(
-= Test 3 ===================================================
-$> ./user_exe 03
-$> diff -U 3 user_output_test03 test03.output
-
-Diff OK :D
-= Test 4 ===================================================
-$> ./user_exe 04
-$> diff -U 3 user_output_test04 test04.output
-
-Diff OK :D
-= Test 5 ===================================================
-$> ./user_exe 05
-Command './user_exe 05' got killed by an Abort
->>>>>>> 0e041c9c09661cd8b4cc38400025a49a84e76b36
