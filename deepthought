@@ -1,9 +1,9 @@
 = Host-specific information ====================================================
 $> hostname; uname -msr
-c1r2p5.1337.ma
+c2r1p7.1337.ma
 Darwin 19.6.0 x86_64
 $> date
-Tue May 17 21:32:47 +01 2022
+Thu May 19 19:54:51 +01 2022
 $> gcc --version
 Apple clang version 12.0.0 (clang-1200.0.32.29)
 Target: x86_64-apple-darwin19.6.0
@@ -17,7 +17,7 @@ InstalledDir: /Library/Developer/CommandLineTools/usr/bin
 
 = libft.h=======================================================================
 $> norminette libft.h | grep -E '(Error|Warning)'
-/Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/dirlibft/libft.h: Error!
+/Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/dirlibft/libft.h: Error!
 Error: CONSECUTIVE_SPC      (line:  19, col:   5):	Two or more consecutives spaces
 Error: SPACE_REPLACE_TAB    (line:  19, col:   5):	Found space when expecting tab
 Error: MIXED_SPACE_TAB      (line:  22, col:   4):	Mixed spaces and tabs
@@ -34,26 +34,16 @@ Norme check failed
 
 = Compiling libft ==============================================================
 $> make re
-rm -f ft_strcpy.o ft_strncpy.o ft_str_is_alpha.o ft_str_is_numeric.o ft_str_is_lowercase.o ft_str_is_uppercase.o ft_str_is_printable.o ft_strupcase.o ft_strlowcase.o ft_strcapitalize.o ft_strlcpy.o 
+rm -f ft_strcpy.o 
 rm -f libft.a
 gcc -Wall -Wextra -Werror -I.   -c -o ft_strcpy.o ft_strcpy.c
-gcc -Wall -Wextra -Werror -I.   -c -o ft_strncpy.o ft_strncpy.c
-gcc -Wall -Wextra -Werror -I.   -c -o ft_str_is_alpha.o ft_str_is_alpha.c
-gcc -Wall -Wextra -Werror -I.   -c -o ft_str_is_numeric.o ft_str_is_numeric.c
-gcc -Wall -Wextra -Werror -I.   -c -o ft_str_is_lowercase.o ft_str_is_lowercase.c
-gcc -Wall -Wextra -Werror -I.   -c -o ft_str_is_uppercase.o ft_str_is_uppercase.c
-gcc -Wall -Wextra -Werror -I.   -c -o ft_str_is_printable.o ft_str_is_printable.c
-gcc -Wall -Wextra -Werror -I.   -c -o ft_strupcase.o ft_strupcase.c
-gcc -Wall -Wextra -Werror -I.   -c -o ft_strlowcase.o ft_strlowcase.c
-gcc -Wall -Wextra -Werror -I.   -c -o ft_strcapitalize.o ft_strcapitalize.c
-gcc -Wall -Wextra -Werror -I.   -c -o ft_strlcpy.o ft_strlcpy.c
-ar rcs libft.a ft_strcpy.o ft_strncpy.o ft_str_is_alpha.o ft_str_is_numeric.o ft_str_is_lowercase.o ft_str_is_uppercase.o ft_str_is_printable.o ft_strupcase.o ft_strlowcase.o ft_strcapitalize.o ft_strlcpy.o
+ar rcs libft.a ft_strcpy.o
 
 $> make bonus
 make: Nothing to be done for `bonus'.
 
 $> ls -la libft.a
--rw-r--r--  1 yaidriss  candidates  9448 May 17 21:32 /Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/dirlibft/libft.a
+-rw-r--r--  1 yaidriss  candidates  904 May 19 19:54 /Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/dirlibft/libft.a
 
 = Part1_functions ==============================================================
 
@@ -64,9 +54,8 @@ $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strcpy.c main.c libft.a
 = Test 1 ===================================================
 $> ./user_exe 01
 $> diff -U 3 user_output_test01 test01.output
-Binary files /Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/tests/Part1_functions/ft_strcpy/user_output_test01 and /Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/tests/Part1_functions/ft_strcpy/test01.output differ$
 
-Diff KO :(
+Diff OK :D
 = Test 2 ===================================================
 $> ./user_exe 02
 $> diff -U 3 user_output_test02 test02.output
@@ -75,9 +64,8 @@ Diff OK :D
 = Test 3 ===================================================
 $> ./user_exe 03
 $> diff -U 3 user_output_test03 test03.output
-Binary files /Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/tests/Part1_functions/ft_strcpy/user_output_test03 and /Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/tests/Part1_functions/ft_strcpy/test03.output differ$
 
-Diff KO :(
+Diff OK :D
 
 = ft_strncpy.c =================================================================
 $> norminette ft_strncpy.c | grep -E '(Error|Warning)'
@@ -86,21 +74,18 @@ $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strncpy.c main.c libft.
 = Test 1 ===================================================
 $> ./user_exe 01
 $> diff -U 3 user_output_test01 test01.output
-Binary files /Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/tests/Part1_functions/ft_strncpy/user_output_test01 and /Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/tests/Part1_functions/ft_strncpy/test01.output differ$
 
-Diff KO :(
+Diff OK :D
 = Test 2 ===================================================
 $> ./user_exe 02
 $> diff -U 3 user_output_test02 test02.output
-Binary files /Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/tests/Part1_functions/ft_strncpy/user_output_test02 and /Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/tests/Part1_functions/ft_strncpy/test02.output differ$
 
-Diff KO :(
+Diff OK :D
 = Test 3 ===================================================
 $> ./user_exe 03
 $> diff -U 3 user_output_test03 test03.output
-Binary files /Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/tests/Part1_functions/ft_strncpy/user_output_test03 and /Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/tests/Part1_functions/ft_strncpy/test03.output differ$
 
-Diff KO :(
+Diff OK :D
 = Test 4 ===================================================
 $> ./user_exe 04
 $> diff -U 3 user_output_test04 test04.output
@@ -139,15 +124,8 @@ Diff OK :D
 = Test 4 ===================================================
 $> ./user_exe 04
 $> diff -U 3 user_output_test04 test04.output
---- /Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/tests/Part1_functions/ft_str_is_alpha/user_output_test04	2022-05-17 21:32:50.000000000 +0100$
-+++ /Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/tests/Part1_functions/ft_str_is_alpha/test04.output	2022-05-17 18:21:08.000000000 +0100$
-@@ -1 +1 @@$
--00000000000000000000000000$
-\ No newline at end of file$
-+11111111111111111111111111$
-\ No newline at end of file$
 
-Diff KO :(
+Diff OK :D
 = Test 5 ===================================================
 $> ./user_exe 05
 $> diff -U 3 user_output_test05 test05.output
@@ -156,15 +134,8 @@ Diff OK :D
 = Test 6 ===================================================
 $> ./user_exe 06
 $> diff -U 3 user_output_test06 test06.output
---- /Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/tests/Part1_functions/ft_str_is_alpha/user_output_test06	2022-05-17 21:32:50.000000000 +0100$
-+++ /Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/tests/Part1_functions/ft_str_is_alpha/test06.output	2022-05-17 18:21:08.000000000 +0100$
-@@ -1 +1 @@$
--00000000000000000000000000$
-\ No newline at end of file$
-+11111111111111111111111111$
-\ No newline at end of file$
 
-Diff KO :(
+Diff OK :D
 = Test 7 ===================================================
 $> ./user_exe 07
 $> diff -U 3 user_output_test07 test07.output
@@ -255,28 +226,11 @@ Diff OK :D
 $> norminette ft_str_is_uppercase.c | grep -E '(Error|Warning)'
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_str_is_uppercase.c main.c libft.a -o user_exe
 
-Undefined symbols for architecture x86_64:
-  "_ft_str_is_uppercase", referenced from:
-      _main in main-074d41.o
-ld: symbol(s) not found for architecture x86_64
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-
-= ft_str_is_printable.c ========================================================
-$> norminette ft_str_is_printable.c | grep -E '(Error|Warning)'
-$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_str_is_printable.c main.c libft.a -o user_exe
-
 = Test 1 ===================================================
 $> ./user_exe 01
 $> diff -U 3 user_output_test01 test01.output
---- /Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/tests/Part1_functions/ft_str_is_printable/user_output_test01	2022-05-17 21:32:52.000000000 +0100$
-+++ /Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/tests/Part1_functions/ft_str_is_printable/test01.output	2022-05-17 18:21:08.000000000 +0100$
-@@ -1 +1 @@$
--100000000000000000000000000000000111111111111111$
-\ No newline at end of file$
-+100000000000000000000000000000001111111111111111$
-\ No newline at end of file$
 
-Diff KO :(
+Diff OK :D
 = Test 2 ===================================================
 $> ./user_exe 02
 $> diff -U 3 user_output_test02 test02.output
@@ -305,8 +259,48 @@ Diff OK :D
 = Test 7 ===================================================
 $> ./user_exe 07
 $> diff -U 3 user_output_test07 test07.output
---- /Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/tests/Part1_functions/ft_str_is_printable/user_output_test07	2022-05-17 21:32:53.000000000 +0100$
-+++ /Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/tests/Part1_functions/ft_str_is_printable/test07.output	2022-05-17 18:21:08.000000000 +0100$
+
+Diff OK :D
+
+= ft_str_is_printable.c ========================================================
+$> norminette ft_str_is_printable.c | grep -E '(Error|Warning)'
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_str_is_printable.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./user_exe 07
+$> diff -U 3 user_output_test07 test07.output
+--- /Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_str_is_printable/user_output_test07	2022-05-19 19:54:58.000000000 +0100$
++++ /Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_str_is_printable/test07.output	2022-05-17 18:21:08.000000000 +0100$
 @@ -1 +1 @@$
 -11111$
 \ No newline at end of file$
@@ -359,31 +353,31 @@ Diff OK :D
 $> norminette ft_strcapitalize.c | grep -E '(Error|Warning)'
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strcapitalize.c main.c libft.a -o user_exe
 
-/Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/tests/Part1_functions/ft_strcapitalize/main.c:37:19: error: implicit declaration of function 'ft_strcapitalize' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+/Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_strcapitalize/main.c:37:19: error: implicit declaration of function 'ft_strcapitalize' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
                 ft_print_result(ft_strcapitalize(str));
                                 ^
-/Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/tests/Part1_functions/ft_strcapitalize/main.c:37:19: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'const char *' [-Werror,-Wint-conversion]
+/Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_strcapitalize/main.c:37:19: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'const char *' [-Werror,-Wint-conversion]
                 ft_print_result(ft_strcapitalize(str));
                                 ^~~~~~~~~~~~~~~~~~~~~
-/Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/tests/Part1_functions/ft_strcapitalize/main.c:17:34: note: passing argument to parameter 's' here
+/Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_strcapitalize/main.c:17:34: note: passing argument to parameter 's' here
 void    ft_print_result(char const *s)
                                     ^
-/Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/tests/Part1_functions/ft_strcapitalize/main.c:42:19: error: implicit declaration of function 'ft_strcapitalize' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+/Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_strcapitalize/main.c:42:19: error: implicit declaration of function 'ft_strcapitalize' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
                 ft_print_result(ft_strcapitalize(str));
                                 ^
-/Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/tests/Part1_functions/ft_strcapitalize/main.c:42:19: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'const char *' [-Werror,-Wint-conversion]
+/Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_strcapitalize/main.c:42:19: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'const char *' [-Werror,-Wint-conversion]
                 ft_print_result(ft_strcapitalize(str));
                                 ^~~~~~~~~~~~~~~~~~~~~
-/Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/tests/Part1_functions/ft_strcapitalize/main.c:17:34: note: passing argument to parameter 's' here
+/Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_strcapitalize/main.c:17:34: note: passing argument to parameter 's' here
 void    ft_print_result(char const *s)
                                     ^
-/Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/tests/Part1_functions/ft_strcapitalize/main.c:47:19: error: implicit declaration of function 'ft_strcapitalize' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+/Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_strcapitalize/main.c:47:19: error: implicit declaration of function 'ft_strcapitalize' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
                 ft_print_result(ft_strcapitalize(str));
                                 ^
-/Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/tests/Part1_functions/ft_strcapitalize/main.c:47:19: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'const char *' [-Werror,-Wint-conversion]
+/Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_strcapitalize/main.c:47:19: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'const char *' [-Werror,-Wint-conversion]
                 ft_print_result(ft_strcapitalize(str));
                                 ^~~~~~~~~~~~~~~~~~~~~
-/Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/tests/Part1_functions/ft_strcapitalize/main.c:17:34: note: passing argument to parameter 's' here
+/Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_strcapitalize/main.c:17:34: note: passing argument to parameter 's' here
 void    ft_print_result(char const *s)
                                     ^
 6 errors generated.
@@ -392,19 +386,19 @@ void    ft_print_result(char const *s)
 $> norminette ft_strlcpy.c | grep -E '(Error|Warning)'
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strlcpy.c main.c libft.a -o user_exe
 
-/Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/tests/Part1_functions/ft_strlcpy/main.c:41:19: error: implicit declaration of function 'ft_strlcpy' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+/Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_strlcpy/main.c:41:19: error: implicit declaration of function 'ft_strlcpy' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
                 ft_print_result(ft_strlcpy(dest, "lorem", 15));
                                 ^
-/Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/tests/Part1_functions/ft_strlcpy/main.c:47:19: error: implicit declaration of function 'ft_strlcpy' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+/Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_strlcpy/main.c:47:19: error: implicit declaration of function 'ft_strlcpy' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
                 ft_print_result(ft_strlcpy(dest, "", 15));
                                 ^
-/Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/tests/Part1_functions/ft_strlcpy/main.c:53:19: error: implicit declaration of function 'ft_strlcpy' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+/Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_strlcpy/main.c:53:19: error: implicit declaration of function 'ft_strlcpy' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
                 ft_print_result(ft_strlcpy(dest, "lorem ipsum", 3));
                                 ^
-/Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/tests/Part1_functions/ft_strlcpy/main.c:59:19: error: implicit declaration of function 'ft_strlcpy' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+/Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_strlcpy/main.c:59:19: error: implicit declaration of function 'ft_strlcpy' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
                 ft_print_result(ft_strlcpy(dest, "lorem ipsum dolor sit amet", 15));
                                 ^
-/Users/yaidriss/Desktop/C02_tester_mini_Moulinette/libft/C02_tester_mini_Moulinette/tests/Part1_functions/ft_strlcpy/main.c:65:19: error: implicit declaration of function 'ft_strlcpy' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+/Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_strlcpy/main.c:65:19: error: implicit declaration of function 'ft_strlcpy' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
                 ft_print_result(ft_strlcpy(dest, "lorem ipsum dolor sit amet", 0));
                                 ^
 5 errors generated.

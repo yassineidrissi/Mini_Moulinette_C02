@@ -6,19 +6,18 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
+ 
+make: *** No rule to make target `ft_strcpy.o', needed by `libft.a'.  Stop.
 
-# Make data base, printed on Sat May 14 19:56:52 2022
+
+# Make data base, printed on Thu May 19 19:53:02 2022
 
 # Variables
 
-# environment
-VSCODE_GIT_ASKPASS_MAIN = /Users/yassine/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass-main.js
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
 ?F = $(notdir $?)
-# environment
-ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
@@ -28,33 +27,31 @@ VSCODE_LOG_NATIVE = false
 # automatic
 @F = $(notdir $@)
 # makefile
-CURDIR := /Users/yassine/Desktop/42_project/tester/libft-war-machine
+CURDIR := /Users/yaidriss/Desktop/C02_tester_mini_Moulinette_0
 # makefile
 SHELL = /bin/sh
-# makefile (from `Makefile', line 17)
+# makefile (from `Makefile', line 19)
 RM = rm -f
 # environment
-VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
-# makefile (from `Makefile', line 18)
+# makefile (from `Makefile', line 20)
 CFLAGS = -Wall -Wextra -Werror -I.
 # makefile (from `Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
+# makefile (from `Makefile', line 16)
+OBJS = $(SRCS:.c=.o)
 # environment
-__CFBundleIdentifier = com.microsoft.VSCode
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cbjm0032wd/T/vscode-ipc-573c1d8c-bef5-4370-bc2d-757c81892ab6.sock
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/tc/cw3c91pd38jds6sv5tk88v5h0000gn/T/vscode-ipc-3da3ef34-0993-4dbc-a152-2decd1e64c23.sock
+VSCODE_CWD = /
 # environment
-VSCODE_CWD = /Users/yassine/Desktop/42_project/tester/libft-war-machine
-# environment
-PATH = /Library/Frameworks/Python.framework/Versions/3.9/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/Library/Apple/usr/bin:/Users/yassine/Developer/flutter/bin
+PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
-# environment
-LaunchInstanceID = 58020F08-AC32-40F3-A150-0775555669E9
 # environment
 VSCODE_LOG_STACK = false
 # environment
@@ -62,81 +59,67 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.Gaqyw7nxmo/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.Batv8W7MeX/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
 VSCODE_PIPE_LOGGING = true
-# makefile (from `Makefile', line 14)
-OBJS = $(SRCS:.c=.o)
 # environment
-PWD = /Users/yassine/Desktop/42_project/tester/libft-war-machine
+PWD = /Users/yaidriss/Desktop/C02_tester_mini_Moulinette_0
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
-HOME = /Users/yassine
+HOME = /Users/yaidriss
 # default
-MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
+MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CLI = 1
+VSCODE_CODE_CACHE_PATH = /Users/yaidriss/Library/Application Support/Code/CachedData/da15b6fd3ef856477bf6f4fb29ba1b7af717770d
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/yassine/Library/Application Support/Code/CachedData/dfd34e8260c270da74b5c2d86d61aee4b6d56977
-# environment
-LOGNAME = yassine
+LOGNAME = yaidriss
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
-ZSH = /Users/yassine/.oh-my-zsh
+ZSH = /Users/yaidriss/.oh-my-zsh
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
-MAKELEVEL := 0
-# environment
 XPC_FLAGS = 0x0
-# environment
-COLORTERM = truecolor
 # default
 MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # makefile (from `Makefile', line 13)
-SRCS = ft_isalpha.c
+SRCS = ft_strcpy.c ft_strncpy.c ft_str_is_alpha.c ft_str_is_numeric.c ft_str_is_lowercase.c ft_str_is_uppercase.c ft_str_is_printable.c ft_strupcase.c ft_strlowcase.c ft_strcapitalize.c ft_strlcpy.c
 # environment
-SHLVL = 3
-# makefile (from `Makefile', line 16)
+SHLVL = 1
+# makefile (from `Makefile', line 18)
 CC = gcc
 # default
 MAKE_VERSION := 3.81
 # environment
-USER = yassine
+USER = yaidriss
 # makefile
 .DEFAULT_GOAL := all
-# makefile (from `Makefile', line 20)
+# makefile (from `Makefile', line 22)
 NAME = libft.a
 # environment
 LESS = -R
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
-MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
-# environment
-VSCODE_GIT_ASKPASS_EXTRA_ARGS = --ms-enable-electron-run-as-node
-# environment
-TERM_PROGRAM = vscode
+MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
 # default
 .VARIABLES := 
 # environment
-TMPDIR = /var/folders/tc/cw3c91pd38jds6sv5tk88v5h0000gn/T/
+TMPDIR = /var/folders/zz/zyxvpxvq6csfxvn_n000cbjm0032wd/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/yassine/Library/Application Support/Code/1.66.2-main.sock
-# environment
-VSCODE_GIT_ASKPASS_NODE = /Users/yassine/Applications/Visual Studio Code.app/Contents/MacOS/Electron
+VSCODE_IPC_HOOK = /Users/yaidriss/Library/Application Support/Code/1.67.1-main.sock
 # makefile
 MAKEFLAGS = Rrqp
 # environment
@@ -144,33 +127,21 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-TERM_PROGRAM_VERSION = 1.66.2
-# environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.27206182.27206188.C161E2C2-0523-46C3-9A8E-5EB4C73E8787
+XPC_SERVICE_NAME = com.microsoft.VSCode.2280
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
 +F = $(notdir $+)
 # environment
-__CF_USER_TEXT_ENCODING = 0x1F5:0x0:0x2
-# environment
-COMMAND_MODE = unix2003
-# environment
-GIT_ASKPASS = /Users/yassine/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass.sh
+__CF_USER_TEXT_ENCODING = 0x18B8D:0:0
 # default
 MAKEFILES := 
 # automatic
 <F = $(notdir $<)
 # environment
-PHANTOMJS_PLATFORM = darwin
-# environment
-PHANTOMJS_ARCH = x64
-# environment
 PAGER = less
 # environment
 LC_ALL = C
-# environment
-SECURITYSESSIONID = 186a3
 # automatic
 ^F = $(notdir $^)
 # default
@@ -178,15 +149,13 @@ SUFFIXES :=
 # default
 .INCLUDE_DIRS = /usr/local/include
 # environment
-VSCODE_GIT_IPC_HANDLE = /var/folders/tc/cw3c91pd38jds6sv5tk88v5h0000gn/T/vscode-git-83350d8fe2.sock
+MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-TERM = xterm-256color
-# environment
-VSCODE_PID = 535
+VSCODE_PID = 4838
 # variable set hash-table stats:
-# Load=87/1024=8%, Rehash=0, Collisions=7/116=6%
+# Load=70/1024=7%, Rehash=0, Collisions=3/99=3%
 
 # Pattern-specific Variable Values
 
@@ -194,15 +163,27 @@ VSCODE_PID = 535
 
 # Directories
 
-# . (device 16777225, inode 30055341): 19 files, no impossibilities.
+# . (device 16777225, inode 57929): 16 files, no impossibilities.
 
-# 19 files, no impossibilities in 1 directories.
+# 16 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
 # No implicit rules.
 
 # Files
+
+# Not a target:
+ft_strlowcase.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+ft_str_is_numeric.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 all: libft.a
 #  Phony target (prerequisite of .PHONY).
@@ -219,6 +200,12 @@ all: libft.a
 #  File has not been updated.
 
 # Not a target:
+ft_str_is_printable.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 .SUFFIXES:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -227,21 +214,27 @@ all: libft.a
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-14 19:55:43
+#  Last modified 2022-05-17 21:24:13
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
-libft.a: ft_isalpha.o
+libft.a: ft_strcpy.o ft_strncpy.o ft_str_is_alpha.o ft_str_is_numeric.o ft_str_is_lowercase.o ft_str_is_uppercase.o ft_str_is_printable.o ft_strupcase.o ft_strlowcase.o ft_strcapitalize.o ft_strlcpy.o
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 25):
+#  commands to execute (from `Makefile', line 27):
 	ar rcs $(NAME) $(OBJS)
 	
+
+# Not a target:
+ft_str_is_lowercase.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 bonus:
 #  Phony target (prerequisite of .PHONY).
@@ -254,20 +247,42 @@ fclean: clean
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 31):
+#  commands to execute (from `Makefile', line 33):
 	$(RM) $(NAME)
 	
 
 # Not a target:
-ft_isalpha.o:
-#  Implicit rule search has been done.
-#  File does not exist.
+ft_str_is_alpha.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
 #  File has not been updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+ft_str_is_uppercase.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+ft_strcapitalize.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 .DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+ft_strlcpy.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+ft_strncpy.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -283,12 +298,26 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 28):
+#  commands to execute (from `Makefile', line 30):
 	$(RM) $(OBJS) $(BONUS_OBJS)
 	
 
+# Not a target:
+ft_strcpy.o:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+ft_strupcase.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
 # files hash-table stats:
-# Load=11/1024=1%, Rehash=0, Collisions=0/34=0%
+# Load=21/1024=2%, Rehash=0, Collisions=0/54=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -300,8 +329,7 @@ clean:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Sat May 14 19:56:52 2022
+ 
+# Finished Make data base on Thu May 19 19:53:02 2022
 
  
-make: *** No rule to make target `ft_isalpha.o', needed by `libft.a'.  Stop.
-

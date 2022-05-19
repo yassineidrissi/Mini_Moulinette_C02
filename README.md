@@ -1,9 +1,9 @@
 # PREAMBLE
-This is an edit of prev libftest made by @yaidriss to fit with the 2019 project libft. <br/>
-(ORIGINAL REP : https://github.com/yaidriss/Libftest) <br/>
-This update was made by @lmartin <br/>
+This is an edit of prev libftest made by @yaidriss to fit with the 2022 project libft. <br/>
+(ORIGINAL REP : https://github.com/yassineidrissi) <br/>
+This update was made by @yaidriss <br/>
 
-# libft-war-machine
+# Mini_Moulinette_C02
 <img align="right" src="./srcs/img_readme.png" width="50%"/>
 This repository contains script to test your libft project.
 The script will do the following tests :
@@ -34,7 +34,7 @@ Makefile up to date.
 ### Installation
 
 ```bash
-git clone https://github.com/y3ll0w42/libft-war-machine
+git clone https://github.com/y3ll0w42/Mini_Moulinette_C02
 ```
 
 ### Configuration
@@ -101,7 +101,7 @@ bash grademe.sh ft_atoi -f ft_strlen -n
 ```
 
 ### Supported functions
-All the supported functions are listed [on this page](https://github.com/y3ll0w42/libft-war-machine/blob/master/supported_functions.md).
+All the supported functions are listed [on this page](https://github.com/y3ll0w42/Mini_Moulinette_C02/blob/master/supported_functions.md).
 ## Contribution
 
 Any suggestions or bugs reporting ?

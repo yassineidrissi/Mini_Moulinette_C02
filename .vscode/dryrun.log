@@ -1,6 +1,16 @@
-make --dry-run --keep-going --print-directory
-make: Entering directory `/Users/yassine/Desktop/42_project/tester/libft-war-machine'
-make: Leaving directory `/Users/yassine/Desktop/42_project/tester/libft-war-machine'
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/yaidriss/Desktop/C02_tester_mini_Moulinette_0'
+make: Leaving directory `/Users/yaidriss/Desktop/C02_tester_mini_Moulinette_0'
  
-make: *** No rule to make target `ft_isalpha.o', needed by `libft.a'.
+make: *** No rule to make target `ft_strcpy.o', needed by `libft.a'.
+make: *** No rule to make target `ft_strncpy.o', needed by `libft.a'.
+make: *** No rule to make target `ft_str_is_alpha.o', needed by `libft.a'.
+make: *** No rule to make target `ft_str_is_numeric.o', needed by `libft.a'.
+make: *** No rule to make target `ft_str_is_lowercase.o', needed by `libft.a'.
+make: *** No rule to make target `ft_str_is_uppercase.o', needed by `libft.a'.
+make: *** No rule to make target `ft_str_is_printable.o', needed by `libft.a'.
+make: *** No rule to make target `ft_strupcase.o', needed by `libft.a'.
+make: *** No rule to make target `ft_strlowcase.o', needed by `libft.a'.
+make: *** No rule to make target `ft_strcapitalize.o', needed by `libft.a'.
+make: *** No rule to make target `ft_strlcpy.o', needed by `libft.a'.
 
