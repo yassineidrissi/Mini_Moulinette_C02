@@ -3,7 +3,7 @@ $> hostname; uname -msr
 c2r1p7.1337.ma
 Darwin 19.6.0 x86_64
 $> date
-Thu May 19 20:53:12 +01 2022
+Tue May 24 23:42:55 +01 2022
 $> gcc --version
 Apple clang version 12.0.0 (clang-1200.0.32.29)
 Target: x86_64-apple-darwin19.6.0
@@ -17,19 +17,27 @@ InstalledDir: /Library/Developer/CommandLineTools/usr/bin
 
 = libft.h=======================================================================
 $> norminette libft.h | grep -E '(Error|Warning)'
-/Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/dirlibft/libft.h: Error!
-Error: CONSECUTIVE_SPC      (line:  19, col:   5):	Two or more consecutives spaces
-Error: SPACE_REPLACE_TAB    (line:  19, col:   5):	Found space when expecting tab
+/Users/yaidriss/Desktop/last_try/Mini_Moulinette_C02/dirlibft/libft.h: Error!
+Error: LINE_TOO_LONG        (line:   1, col:  82):	line too long
+Error: LINE_TOO_LONG        (line:   1, col:  82):	line too long
+Error: CONSECUTIVE_SPC      (line:  18, col:   5):	Two or more consecutives spaces
+Error: SPACE_REPLACE_TAB    (line:  18, col:   5):	Found space when expecting tab
+Error: MIXED_SPACE_TAB      (line:  21, col:   4):	Mixed spaces and tabs
+Error: SPACE_REPLACE_TAB    (line:  21, col:   4):	Found space when expecting tab
 Error: MIXED_SPACE_TAB      (line:  22, col:   4):	Mixed spaces and tabs
 Error: SPACE_REPLACE_TAB    (line:  22, col:   4):	Found space when expecting tab
 Error: MIXED_SPACE_TAB      (line:  23, col:   4):	Mixed spaces and tabs
 Error: SPACE_REPLACE_TAB    (line:  23, col:   4):	Found space when expecting tab
-Error: MIXED_SPACE_TAB      (line:  24, col:   4):	Mixed spaces and tabs
-Error: SPACE_REPLACE_TAB    (line:  24, col:   4):	Found space when expecting tab
+Error: MIXED_SPACE_TAB      (line:  24, col:   5):	Mixed spaces and tabs
+Error: SPACE_REPLACE_TAB    (line:  24, col:   5):	Found space when expecting tab
 Error: MIXED_SPACE_TAB      (line:  25, col:   5):	Mixed spaces and tabs
 Error: SPACE_REPLACE_TAB    (line:  25, col:   5):	Found space when expecting tab
-Error: MIXED_SPACE_TAB      (line:  26, col:   5):	Mixed spaces and tabs
-Error: SPACE_REPLACE_TAB    (line:  26, col:   5):	Found space when expecting tab
+Error: MIXED_SPACE_TAB      (line:  26, col:  13):	Mixed spaces and tabs
+Error: SPACE_REPLACE_TAB    (line:  26, col:  13):	Found space when expecting tab
+Error: MIXED_SPACE_TAB      (line:  27, col:   5):	Mixed spaces and tabs
+Error: SPACE_REPLACE_TAB    (line:  27, col:   5):	Found space when expecting tab
+Error: MIXED_SPACE_TAB      (line:  28, col:   5):	Mixed spaces and tabs
+Error: SPACE_REPLACE_TAB    (line:  28, col:   5):	Found space when expecting tab
 Norme check failed
 
 = Compiling libft ==============================================================
@@ -43,7 +51,7 @@ $> make bonus
 make: Nothing to be done for `bonus'.
 
 $> ls -la c02.a
--rw-r--r--  1 yaidriss  candidates  904 May 19 20:53 /Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/dirlibft/c02.a
+-rw-r--r--  1 yaidriss  candidates  904 May 24 23:42 /Users/yaidriss/Desktop/last_try/Mini_Moulinette_C02/dirlibft/c02.a
 
 = Part1_functions ==============================================================
 
@@ -299,15 +307,8 @@ Diff OK :D
 = Test 7 ===================================================
 $> ./user_exe 07
 $> diff -U 3 user_output_test07 test07.output
---- /Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_str_is_printable/user_output_test07	2022-05-19 20:53:19.000000000 +0100$
-+++ /Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_str_is_printable/test07.output	2022-05-17 18:21:08.000000000 +0100$
-@@ -1 +1 @@$
--11111$
-\ No newline at end of file$
-+11110$
-\ No newline at end of file$
 
-Diff KO :(
+Diff OK :D
 
 = ft_strupcase.c ===============================================================
 $> norminette ft_strupcase.c | grep -E '(Error|Warning)'
@@ -351,60 +352,48 @@ Diff OK :D
 
 = ft_strcapitalize.c ===========================================================
 $> norminette ft_strcapitalize.c | grep -E '(Error|Warning)'
-../ft_strcapitalize.c: Error!
-Error: SPACE_BEFORE_FUNC    (line:  36, col:   4):	space before function name
-Error: NO_ARGS_VOID         (line:  36, col:  10):	Empty function argument requires void
-Error: SPC_AFTER_OPERATOR   (line:  38, col:  16):	missing space after operator
-Error: BRACE_SHOULD_EOL     (line:  39, col:   1):	Expected newline after brace
-Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strcapitalize.c main.c c02.a -o user_exe
 
-/Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_strcapitalize/main.c:37:19: error: implicit declaration of function 'ft_strcapitalize' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
-                ft_print_result(ft_strcapitalize(str));
-                                ^
-/Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_strcapitalize/main.c:37:19: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'const char *' [-Werror,-Wint-conversion]
-                ft_print_result(ft_strcapitalize(str));
-                                ^~~~~~~~~~~~~~~~~~~~~
-/Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_strcapitalize/main.c:17:34: note: passing argument to parameter 's' here
-void    ft_print_result(char const *s)
-                                    ^
-/Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_strcapitalize/main.c:42:19: error: implicit declaration of function 'ft_strcapitalize' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
-                ft_print_result(ft_strcapitalize(str));
-                                ^
-/Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_strcapitalize/main.c:42:19: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'const char *' [-Werror,-Wint-conversion]
-                ft_print_result(ft_strcapitalize(str));
-                                ^~~~~~~~~~~~~~~~~~~~~
-/Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_strcapitalize/main.c:17:34: note: passing argument to parameter 's' here
-void    ft_print_result(char const *s)
-                                    ^
-/Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_strcapitalize/main.c:47:19: error: implicit declaration of function 'ft_strcapitalize' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
-                ft_print_result(ft_strcapitalize(str));
-                                ^
-/Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_strcapitalize/main.c:47:19: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'const char *' [-Werror,-Wint-conversion]
-                ft_print_result(ft_strcapitalize(str));
-                                ^~~~~~~~~~~~~~~~~~~~~
-/Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_strcapitalize/main.c:17:34: note: passing argument to parameter 's' here
-void    ft_print_result(char const *s)
-                                    ^
-6 errors generated.
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
 
 = ft_strlcpy.c =================================================================
 $> norminette ft_strlcpy.c | grep -E '(Error|Warning)'
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strlcpy.c main.c c02.a -o user_exe
 
-/Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_strlcpy/main.c:41:19: error: implicit declaration of function 'ft_strlcpy' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
-                ft_print_result(ft_strlcpy(dest, "lorem", 15));
-                                ^
-/Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_strlcpy/main.c:47:19: error: implicit declaration of function 'ft_strlcpy' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
-                ft_print_result(ft_strlcpy(dest, "", 15));
-                                ^
-/Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_strlcpy/main.c:53:19: error: implicit declaration of function 'ft_strlcpy' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
-                ft_print_result(ft_strlcpy(dest, "lorem ipsum", 3));
-                                ^
-/Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_strlcpy/main.c:59:19: error: implicit declaration of function 'ft_strlcpy' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
-                ft_print_result(ft_strlcpy(dest, "lorem ipsum dolor sit amet", 15));
-                                ^
-/Users/yaidriss/Desktop/C02-test/C02_tester_mini_Moulinette_0/tests/Part1_functions/ft_strlcpy/main.c:65:19: error: implicit declaration of function 'ft_strlcpy' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
-                ft_print_result(ft_strlcpy(dest, "lorem ipsum dolor sit amet", 0));
-                                ^
-5 errors generated.
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+Command './user_exe 05' got killed by an Abort
